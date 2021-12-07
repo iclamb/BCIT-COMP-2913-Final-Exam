@@ -2,7 +2,7 @@ import "./styles.css";
 
 export default function BookViewer(props) {
   let sequels = props.books[props.current].sequels;
-    let sequelsData
+  let sequelsData;
   if (sequels) {
     sequelsData = sequels.map((sequel) => (
       <div style={{ display: "flex", alignItems: "center" }}>
