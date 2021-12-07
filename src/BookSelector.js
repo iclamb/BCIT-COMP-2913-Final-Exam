@@ -7,7 +7,7 @@ export default function BookSelector({books, setCurrent}) {
       <h3>Select an Book</h3>
 
       {books.map((book) => (
-        <BookDetail name={book.name} coverImg={book.coverImg} author={book.author} coauthor={book.coAuthor} setCurrent={() => setCurrent(book.id)} />
+        <BookDetail book={book} setCurrent={() => setCurrent(book.id)} />
       ))}
     </div>
   );
