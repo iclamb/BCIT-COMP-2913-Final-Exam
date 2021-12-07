@@ -7,7 +7,6 @@ export default function BookViewer(props) {
     sequelsData = sequels.map((sequel) => (
       <div style={{ display: "flex", alignItems: "center" }}>
         <li style={{ padding: "5px" }}>{sequel}</li>
-        <img alt="play" height="20px" src="https://i.imgur.com/8aRZ4bs.png" />
       </div>
     ));
   }
