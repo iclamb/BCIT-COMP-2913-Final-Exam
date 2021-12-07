@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import {useState } from 'react';
+import books from "./data";
+
+import BookViewer from "./BookViewer";
+import BookSelector from "./BookSelector";
 
 function App() {
+  let [currentBook, setCurrentBook] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BookViewer current={currentBook} books={books} />
+      <BookSelector
+        books={books}
+        setCurrent={(id) => setCurrentBook(id, console.log(id))}
+      />
     </div>
   );
 }
